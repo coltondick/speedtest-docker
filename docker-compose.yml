@@ -1,0 +1,14 @@
+version: "2"
+services:
+  speedtest:
+    image: coltondick/speedtest:latest
+    container_name: speedtest
+    environment:
+      SPEEDTEST_INTERVAL: ${SPEEDTEST_INTERVAL}
+      SPEEDTEST_HOST: ${SPEEDTEST_HOST}
+      SPEEDTEST_SERVER: ${SPEEDTEST_SERVER}
+      INFLUXDB_HOST: ${INFLUXDB_HOST}
+      INFLUXDB_DB: ${INFLUXDB_DB}
+      INFLUXDB_USERNAME: ${INFLUXDB_USERNAME}
+      INFLUXDB_PASSWORD: ${INFLUXDB_PASSWORD}
+    restart: always
