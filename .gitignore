@@ -1,2 +1,3 @@
 data/influxdb/*
 .env
+node_modules
